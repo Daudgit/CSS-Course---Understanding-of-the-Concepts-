@@ -170,38 +170,6 @@ The margin box is the outermost area of the box and is created by the `margin` p
 
 Visual Representation 🌈
 
-Here's a visual representation of the box model areas:
-
-```
-  Margin
- ________
-|        |
-| Margin |
-|        |
-| ______ |
-||      ||
-||      ||
-||      ||
-||______||
-| Padding|
-|  Box   |
-|        |
-| ______ |
-||      ||
-||Content||
-||  Box  ||
-||      ||
-| ______ |
-| Border |
-|  Box   |
-|        |
-| ______ |
-| Padding|
-|  Box   |
-|        |
-|________|
-
-```
 
 Conclusion 🏁
 
