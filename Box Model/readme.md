@@ -168,8 +168,6 @@ The border box surrounds the padding box and is defined by the `border` property
 4. Margin Box 🌼
 The margin box is the outermost area of the box and is created by the `margin` property. It represents the space around the box, providing separation from other elements on the page. Properties such as `outline` and `box-shadow` also occupy the margin box without affecting the size of the box. For instance, an `outline-width` of 200px would be painted on top of the margin box, but it wouldn't change the size of the box or its inner areas.
 
-Visual Representation 🌈
-
 
 Conclusion 🏁
 
