@@ -143,7 +143,7 @@ CSS:
 
 In this example, the `.box-intrinsic` class uses `min-content` for both width and height properties. This allows the box to resize itself based on the intrinsic minimum width and height of its content. As a result, the box will perfectly fit around the text "CSS is awesome" without overflowing.
 
-_Please run this codes and see the difference_
+_Please run these codes and see the difference_
 
 ## Conclusion 🏁
 
