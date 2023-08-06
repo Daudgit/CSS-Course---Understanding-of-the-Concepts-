@@ -59,9 +59,6 @@ p {
 
 This will give the paragraph element a light gray background color. 🎨
 
-## Visual Example 👀
-
-Here's how the paragraph element will look like in the browser:
 
 ![CSS Box Model Example](visual_example.png)
 
