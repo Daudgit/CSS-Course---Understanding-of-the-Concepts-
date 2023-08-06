@@ -60,7 +60,7 @@ p {
 This will give the paragraph element a light gray background color. 🎨
 
 
-![CSS Box Model Example](visual_example.png)
+
 
 ## How the Box Model Affects Size 📐
 
