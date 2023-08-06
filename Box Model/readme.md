@@ -172,3 +172,54 @@ The margin box is the outermost area of the box and is created by the `margin` p
 Conclusion 🏁
 
 Understanding the different areas of the box model is essential for controlling the layout and spacing of elements on a web page. Each area plays a distinct role in the visual representation and behavior of boxes. By manipulating the properties that affect each area, such as `padding`, `border`, and `margin`, you can create appealing and well-structured designs on your web page.
+
+# Part - 4
+Debugging the Box Model 🐞
+
+Browser DevTools provide a helpful visualization of a selected box's box model calculations, allowing you to understand how the box model works and how it affects your website. Here's how you can use DevTools to explore the box model:
+
+1. Open DevTools:
+To open the DevTools in most browsers, you can right-click on an element on the page and choose "Inspect" or "Inspect Element" from the context menu. Alternatively, you can use the keyboard shortcut `Ctrl + Shift + I` (or `Cmd + Option + I` on macOS).
+
+2. Select an Element:
+Once DevTools is open, use the "Inspect" tool (usually indicated by an arrow icon) to select the element you want to examine. Click on the element in the page or directly in the DOM tree displayed in the DevTools.
+
+3. Show the Box Model Debugger:
+In DevTools, you can find a section called "Styles" or "Computed" that displays all the CSS properties applied to the selected element. Look for a section specifically related to the box model, which may be labeled "Box Model," "Layout," or "Dimensions." There, you'll see the calculated values for the content, padding, border, and margin of the selected element.
+
+Controlling the Box Model 🎛️
+
+To gain control over the box model, you must first understand what happens in the browser's rendering process. Browsers apply a user agent stylesheet to HTML documents, providing default styles to elements if no CSS is defined. This includes defining the default display value for various elements, such as block, inline, or inline-block.
+
+Understanding the `box-sizing` property is also crucial. By default, all elements have `box-sizing: content-box`, which means when you set dimensions like width and height, they apply to the content box. Padding and border values are then added to the content box's size, affecting the overall dimensions of the box.
+
+To change this behavior and gain more predictable sizing, you can use the alternative box model, `box-sizing: border-box`. When you set this property, the width you define applies to the border box instead of the content box. As a result, padding and borders get included in the specified width, making it easier to control the box's final size.
+
+For example:
+
+```css
+.my-box {
+  box-sizing: border-box;
+  width: 200px;
+  border: 10px solid;
+  padding: 20px;
+}
+```
+
+In this case, the `.my-box` element will render at exactly 200px wide, including the padding and border. Without `box-sizing: border-box`, the total visible width would be 260px (200px content width + 40px padding + 20px border).
+
+To apply the alternative box model globally, you can use the following CSS rule:
+
+```css
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+```
+
+This rule selects all elements and their `::before` and `::after` pseudo-elements and applies `box-sizing: border-box` to them. This way, every element on the page will use the border box model, making sizing more consistent and predictable.
+
+Conclusion 🏁
+
+Using DevTools to visualize the box model calculations can help you understand how the box model behaves and troubleshoot any sizing issues on your website. By controlling the box model with `box-sizing: border-box`, you can achieve more predictable layouts and avoid unexpected sizing problems. The alternative box model is commonly added to resets and normalizers to ensure a consistent sizing approach across all elements.
