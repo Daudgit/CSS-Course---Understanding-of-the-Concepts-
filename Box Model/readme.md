@@ -150,3 +150,59 @@ _Please run these codes and see the difference_
 In summary, extrinsic sizing provides more control over the box dimensions but can lead to visible overflow if the content exceeds the fixed dimensions. On the other hand, intrinsic sizing, the default behavior of browsers, allows the box to resize based on its content, providing more flexibility in most cases.
 
 Remember to choose the appropriate sizing method based on your specific use case and desired layout outcome. Both extrinsic and intrinsic sizing have their advantages and can be used in combination to create more complex and responsive layouts.
+
+# Part - 3
+The Box Model Areas 📦
+
+The CSS Box Model consists of several distinct areas, each serving a specific purpose. Let's take a closer look at each of these areas:
+
+1. Content Box 📝
+The content box is the innermost area of the box and is where the actual content of the element resides. It is influenced by the size of the content it contains, making it the most variable in size among all the box model areas. For example, the size of text, images, or other elements within the box will affect the size of the content box.
+
+2. Padding Box 📦
+The padding box surrounds the content box and is created by the `padding` property. Padding adds space between the content and the border. The background of the box is visible within the space created by padding. If the box has overflow rules set, such as `overflow: auto` or `overflow: scroll`, scrollbars may appear within the padding box when the content overflows.
+
+3. Border Box 🚧
+The border box surrounds the padding box and is defined by the `border` property. It represents the outer boundary of the box, and the border edge is the visual limit of what you can see. The border property is used to visually frame an element, and its size contributes to the overall size of the box.
+
+4. Margin Box 🌼
+The margin box is the outermost area of the box and is created by the `margin` property. It represents the space around the box, providing separation from other elements on the page. Properties such as `outline` and `box-shadow` also occupy the margin box without affecting the size of the box. For instance, an `outline-width` of 200px would be painted on top of the margin box, but it wouldn't change the size of the box or its inner areas.
+
+Visual Representation 🌈
+
+Here's a visual representation of the box model areas:
+
+```
+  Margin
+ ________
+|        |
+| Margin |
+|        |
+| ______ |
+||      ||
+||      ||
+||      ||
+||______||
+| Padding|
+|  Box   |
+|        |
+| ______ |
+||      ||
+||Content||
+||  Box  ||
+||      ||
+| ______ |
+| Border |
+|  Box   |
+|        |
+| ______ |
+| Padding|
+|  Box   |
+|        |
+|________|
+
+```
+
+Conclusion 🏁
+
+Understanding the different areas of the box model is essential for controlling the layout and spacing of elements on a web page. Each area plays a distinct role in the visual representation and behavior of boxes. By manipulating the properties that affect each area, such as `padding`, `border`, and `margin`, you can create appealing and well-structured designs on your web page.
