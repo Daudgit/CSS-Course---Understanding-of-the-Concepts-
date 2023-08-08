@@ -136,3 +136,74 @@ Similar to the class selector, the hash (#) character before `rad` indicates it'
 Keep in mind that while browsers will apply CSS rules for multiple instances of an ID, IDs are meant to be unique. It's generally recommended to use classes over IDs for styling unless you have specific reasons for using IDs.
 
 With class and ID selectors, you have the flexibility to target elements precisely and enhance the visual appeal of your web pages! 🌟🎉
+
+
+## Attribute Selectors and Grouping 🎯🔗
+
+Attribute selectors are a versatile way to target elements based on their attributes and attribute values. Additionally, grouping selectors allows you to apply styles to multiple elements using a single rule. Let's delve into these concepts.
+
+### Attribute Selector
+
+An attribute selector lets you target elements that have a specific HTML attribute, or elements with a certain value for an attribute. To use attribute selectors, wrap the selector in square brackets `[ ]`.
+
+For instance, consider this CSS rule:
+
+```css
+[data-type='primary'] {
+  color: red;
+}
+```
+
+In this example, the rule targets all elements with the attribute `data-type` having a value of `primary`.
+
+You can also target elements with a specific attribute regardless of its value:
+
+```css
+[data-type] {
+  color: red;
+}
+```
+
+Here, both elements with the attribute `data-type` will have red text, irrespective of their attribute values.
+
+### Case-Sensitive and String Matching Operators
+
+Attribute selectors offer various operators for specific matching needs. For instance, you can perform case-sensitive matching and match portions of strings within attribute values:
+
+```css
+[data-type='primary' s] {
+  color: red;
+}
+
+[href*='example.com'] {
+  color: red;
+}
+
+[href^='https'] {
+  color: green;
+}
+
+[href$='.com'] {
+  color: blue;
+}
+```
+
+The `s` operator makes the attribute matching case-sensitive. Other operators (`*`, `^`, `$`) allow you to match attributes that contain, start with, or end with specific strings, respectively.
+
+### Grouping Selectors
+
+Selectors don't have to target only a single element. You can group multiple selectors using commas:
+
+```css
+strong,
+em,
+.my-class,
+[lang] {
+  color: red;
+}
+```
+
+In this example, the color change is applied to `<strong>` and `<em>` elements, elements with the class `.my-class`, and elements with a `lang` attribute.
+
+With attribute selectors and grouping, you gain powerful tools to efficiently target and style elements, making your CSS code more expressive and flexible! 🧩🌈
+
